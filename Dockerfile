@@ -2,12 +2,10 @@ FROM jenkins
 MAINTAINER tumf "y.takahara@gmail.com"
 
 USER root
-RUN apt-get update && apt-get install -y curl git build-essential libmysqlclient-dev libxml2-dev sudo
+RUN apt-get update && apt-get install -y curl git sudo build-essential libmysqlclient-dev libxml2-dev libxslt1-dev
 RUN curl -sSL https://rvm.io/mpapis.asc | gpg --import -
 RUN curl -sSL https://get.rvm.io | bash -s stable
 RUN bash -l -c "rvm requirements"
-
-# RUN apt-get update && apt-get install -y curl git build-essential libmysqlclient-dev libxml2-dev sudo
 
 USER jenkins
 #WORKDIR  /var/jenkins_home
