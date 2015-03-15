@@ -9,7 +9,7 @@ RUN bash -l -c "rvm requirements"
 
 # RUN apt-get update && apt-get install -y curl git build-essential libmysqlclient-dev libxml2-dev sudo
 
-#USER jenkins
+USER jenkins
 #WORKDIR  /var/jenkins_home
 #ENV HOME /var/jenkins_home
 #RUN curl -sSL https://rvm.io/mpapis.asc | gpg --import -
