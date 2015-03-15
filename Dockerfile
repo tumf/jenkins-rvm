@@ -2,6 +2,7 @@ FROM jenkins
 MAINTAINER tumf "y.takahara@gmail.com"
 
 USER root
+RUN apt-get update && apt-get install -y curl git build-essential libmysqlclient-dev libxml2-dev sudo
 RUN curl -sSL https://rvm.io/mpapis.asc | gpg --import -
 RUN curl -sSL https://get.rvm.io | bash -s stable
 RUN bash -l -c "rvm requirements"
